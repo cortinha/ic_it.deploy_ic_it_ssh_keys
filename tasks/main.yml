@@ -1,0 +1,32 @@
+---
+# tasks file for ic_it.deploy_ic_it_ssh_keys
+
+- name: set the correct destination for the authorized key file (non root user)
+  set_fact:
+    authorized_key_file: "/home/{{ user_to_deploy_ssh_keys }}/.ssh/authorized_keys"
+  when: user_to_deploy_ssh_keys != "root"
+
+- name: set the correct destination for the authorized keys file (for root user)
+  set_fact:
+    authorized_key_file: "/root/.ssh/authorized_keys"
+  when: user_to_deploy_ssh_keys == "root"
+
+- name: ensure that the .ssh folder exists (non root user)
+  file:
+    path: "/home/{{ user_to_deploy_ssh_keys }}/.ssh"
+    state: directory
+  when: user_to_deploy_ssh_keys != "root"
+
+- name: ensure that the .ssh folder exists (root user)
+  file:
+    path: "/root/.ssh"
+    state: directory
+  when: user_to_deploy_ssh_keys == "root"
+
+- name: download the authorized_keys file from github
+  get_url:
+    url: "https://raw.githubusercontent.com/{{ github_user }}/{{ github_repo }}/master/authorized_keys"
+    dest: "{{ authorized_key_file }}"
+    mode: 0600
+    owner: "{{ user_to_deploy_ssh_keys }}"
+    group: "{{ user_to_deploy_ssh_keys }}"

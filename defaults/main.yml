@@ -1,0 +1,5 @@
+---
+# defaults file for ic_it.deploy_ic_it_ssh_keys
+user_to_deploy_ssh_keys: "root"
+github_user: EPFL-IC
+github_repo: "ic-it-authorized-keys"
