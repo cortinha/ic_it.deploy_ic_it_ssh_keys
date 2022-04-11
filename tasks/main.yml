@@ -40,9 +40,9 @@
     - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDMyWRMhKJXecRCHz4Zck0Nz2Pq+ryOsPRsvmq8gySR/ emmanuel.jaep+ed25519@epfl.ch"
 
 - name: revoke the keys that should be revoked
-  ansible.posix.authorized_key:
-    user: "{{ user_to_deploy_ssh_keys }}"
+  lineinfile:
+    path: "{{ authorized_key_file }}"
     state: absent
-    key: "{{ item }}"
+    line: "{{ item }}"
   with_items:
     - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBwiMftRitwBcSvlK6CFbcHZRi/isEksmHRjIqfpIMUHI7rzkIT3IH07q9QyyPxKBfw2JkcNljvdBMS6hdeny4dLUeb/kNHPPHZ9Xb/egw7FvLHTYc+i+rzZLQ4NmIL+qTmNrBBA/Lj+gVhidu7Rt2y/5o/7HFDMz9i3lLJkS+zgqULrJN+nptf6kVY9slryHYuLuJgmcTM+I0VcSm1NAYxxAAkIUFRv3ydQgB1j0FhQk89I/ovlBbblTBxN50vTYmiWSC9FlSEqRZqF/48wCGtn0SMmjuea/lqy9BDOlRGITHS9phlfULXms9A62INCNjBEBDesd0qV7Fo2fYFogb jaep@tsf-476-wpa-6-095.epfl.ch"
