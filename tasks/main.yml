@@ -38,6 +38,7 @@
     - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICSK7s6nNmeTZMkzf9uAydNIY1YqmRgVLoEfAh8of6Qn yoann.moulin+ed25519@epfl.ch"
     - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDB54R5ADTgOz59M9JOEBg0pIFstoVhdU0NMidmii4Vx3kMy018d/InpilZs4VkNGSOrIa3VK2LZw8cN63bpL1Zd53t0C4nfD+uhopWSuyKq+l+ug9qwbbT7xutw0Ig1rJCdGhIBrM6Irbf5qQJ1L3XBC9ZJF2jsSHXerDG9P7DN4D+86BVpwTPV+pJNbCxFWl3NYxKGaq+NAtryrRYoenQ2mM6ZhzUrabrPWeVTdT5y2CpB4peOFFPaQL9kBGSGLMt5Ftnhmu+s1Z69mh0xprljbMmCg/v2vA+5ZWrzCZCH2V4+L/68A3vOH5GpR+6AW8Gizwa2dfHHTyIySjbqV3VXoqLpcTgZtq0plZTqnQBnVYdUIqRpdLmMvNURASSUKDZlkIGlYR4dOybS4EEkgkicf47l9qtYStM2gDuVUTjePrIUOxo3s1CUchE9biJ7hT9llBKxCgbakCHGwOuCODb1yQeHctmwB7cNM0sdjnwaX2ejEw+Ijc5gQUGgJ3eJ30= gmeylan@gmail.com"
     - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDMyWRMhKJXecRCHz4Zck0Nz2Pq+ryOsPRsvmq8gySR/ emmanuel.jaep+ed25519@epfl.ch"
+    - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIENczF54t5Mzc9pjITY9uwQpNjvIK3PD7Y3/YJzJHpM1 awx-icadmin010"
 
 - name: revoke the keys that should be revoked
   lineinfile:
