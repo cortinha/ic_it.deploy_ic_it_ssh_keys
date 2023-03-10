@@ -40,7 +40,8 @@
     - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDMyWRMhKJXecRCHz4Zck0Nz2Pq+ryOsPRsvmq8gySR/ emmanuel.jaep+ed25519@epfl.ch"
     - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIF8wyZ7y/pONQ67MbvzPuiJ5oT9mFLBSZSBMssZOQm/ pascal.bangerter@pbasite.ch"
     - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCnYYp+NFkMtxxEoDopqS5dTDu3AYU38T8v27Mko5q48Cv2iD1UO5I8U21qRCYK19K6FEUfDycUeMosFmAItJmmMevnL4fX/bwBOCeq9nfegWgmJfpAmZiyws95SKDlTu8DhVeASge5N1QAC3SsG9PjYDFzmiMYBeiw/YmuZc9ydNObgz/0uxbKfBvJST3JfU6ytrqFEgW/yO/s/JEFMrLtvIoTPUDcdUMise97Fcf/kqVrthWlWptCFgQKWiU6XRSG+PYBpNyY5PzLBuGO82x6Z5dDRd1bYx6rVXObEdSkhIpwYiWXcR5Jj2TxN1GiVczNzgmQzdAxpSCt7H2+nc0krYJhjlwpmRSxPpmchlW4BQwY9i7yVNVQH/UnUCXPUGkRj0DpbmcQYALSdQONeezt9vsoXzJ4uZmI/aRq9KhRtFZEU9WAtO2uGKBMz1s33rso/m0nVPgFLtnFnQPGJXTqvi5oodG1/YiTgDzbzWpvG3U0F0epHWq1hMEvYcZFJVE= pascal@cdm-cdmpc34-vm2"
-
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC33LnUJvs7/ewgk5pfXEtK/76fO293ZhknJ/aryyfcBMv3o5bsanAY9mMPXq3mTP1Z+87mSG2tPIyxCmEozBFXHt20epo0IM1RuQ7Go2IMZ4xNFe8XDcb7cG/mfNEzYZQ+3nktsFHtjY/8KelaAbevWDLgFhynVSapIKJcIwZqYWkTFwZGT2/dV15RHNwGgLU3MvsKCB0QhzQal5uLC5oczYS9P1Oz2/sySP/mEMt7X22VZPIVogXkldm+T5oZymA0VUHg//SAFiUzA5wrpIUV4oVXZU++yl4u5qqncW/4w6mqtsIFSeAecf8eOATkNBbzqYvg328AtgOuPriPYslu0cEunGPzEuNKxZAtlvzj7MhkHJJX4J2rm7QcjDsbQrNDfSb2an8RZm/D6Y+QirW2uNMJOYlEPJdGovT5llxwpzmo3E61IMgDelfiBUDiKY1nc5ZKWJRiv6gr1tYhxPqZ0OS8oaM5J23P9erV1KIKxu65uVXe7wyigy+Bctuag3s= ivan.forte@epfl.ch"
+    
 - name: revoke the keys that should be revoked
   lineinfile:
     path: "{{ authorized_key_file }}"
